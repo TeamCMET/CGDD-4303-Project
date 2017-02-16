@@ -67,7 +67,7 @@ public class Controller : MonoBehaviour {
 
         movement.x += Input.GetAxis("Horizontal") * speed;
         movement.z += Input.GetAxis("Vertical") * speed;
-        Debug.Log(movement);
+      //  Debug.Log(movement);
         //if (Input.GetKey(KeyCode.UpArrow)){
         //    movement.z +=speed;
         //    transform.rotation = Quaternion.LookRotation(Vector3.forward * Time.deltaTime);
@@ -96,12 +96,12 @@ public class Controller : MonoBehaviour {
       //  HandleRotation();
        
         transform.position = movement;
-        movement.Normalize();
-        if (movement != Vector3.zero)
-        {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), rotateSpeed);
+       // movement.Normalize();
+     //   if (movement != Vector3.zero)
+     //   {
+      //      transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), rotateSpeed);
 
-        }
+     //   }
        // transform.rotation = Quaternion.LookRotation(movement);
     }
 }
